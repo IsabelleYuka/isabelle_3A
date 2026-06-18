@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        ContaBancaria conta = new ContaBancaria();
+
+        System.out.print("Nome do cliente: ");
+        conta.nomeCliente = sc.nextLine();
+
+        System.out.print("CPF: ");
+        conta.cpf = sc.nextLine();
+
+        System.out.print("Nome do banco: ");
+        conta.nomeBanco = sc.nextLine();
+
+        System.out.print("Agência: ");
+        conta.agencia = sc.nextInt();
+
+        System.out.print("Número da conta: ");
+        conta.numeroConta = sc.nextInt();
+
+        System.out.println("\n--- DADOS DA CONTA ---");
+        conta.mostrarDados();
+
+        System.out.print("\nQuanto deseja sacar? ");
+        double valor = sc.nextDouble();
+
+        conta.sacar(valor);
+
+        System.out.println("\n--- SALDO ATUALIZADO ---");
+        conta.mostrarDados();
+
+        sc.close();
+    }
+}
