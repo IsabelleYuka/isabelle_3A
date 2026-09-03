@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Números Ímpares</title>
+</head>
+<body>
+
+    <h1>Números Ímpares</h1>
+
+    <button onclick="verificarImpares()">Executar</button>
+
+    <pre id="resultado"></pre>
+
+    <script>
+        function verificarImpares() {
+
+            let inicio = Number(prompt("Digite o início do intervalo:"));
+            let fim = Number(prompt("Digite o fim do intervalo:"));
+
+            for (let i = inicio; i <= fim; i++) {
+
+                if (i % 2 != 0) {
+                    document.getElementById("resultado").innerHTML += i + "\n";
+                }
+
+            }
+        }
+    </script>
+
+</body>
+</html>
